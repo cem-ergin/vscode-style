@@ -7,73 +7,10 @@
   /** Extension: Apc */
   "apc.font.family": "Monaspace Krypton",
   "apc.monospace.font.family": "Monaspace Krypton",
-
-  // "apc.electron": {
-  //   "titleBarStyle": "hiddenInset",
-  //   "frame": false
-  // },
-
-  // "apc.imports": [
-  //   "~/.custom-loaders/patch-vscode.js",
-  //   "~/.custom-loaders/patch-vscode.css"
-  // ],
-
-  // "apc.stylesheet": {
-  //   ":root": {
-  //     "--titlebar-height": "40px !important"
-  //   },
-
-  //   ".editor-container": {
-  //     "height": "calc(100% - var(--titlebar-height)) !important;"
-  //   },
-
-  //   ".split-view-view:has(>.sidebar)": {
-  //     "display": "flex"
-  //   },
-
-  //   // disables right side bar decorations so you can't see the errors or warnings
-  //   // ".decorationsOverviewRuler": {
-  //   //   "display": "none !important"
-  //   // },
-
-  //   ".editor-actions": {
-  //     "display": "none !important"
-  //   },
-
-  //   ".tabs-and-actions-container": {
-  //     "--editor-group-tab-height": "40px !important"
-  //   },
-
-  //   ".tabs.show-file-icons": {
-  //     "--editor-group-tab-height": "40px !important"
-  //   },
-
-  //   ".part.sidebar": {
-  //     "display": "flex",
-  //     "flex-direction": "column",
-  //     "height": "auto"
-  //   },
-
-  //   ".sidebar .composite.title": {
-  //     "flex-direction": "column",
-  //     "height": "auto",
-  //     "padding": "0 4px"
-  //   },
-
-  //   ".sidebar .composite.title .title-label": {
-  //     "margin": "10px 0",
-  //     "padding-left": "0"
-  //   },
-
-  //   ".sidebar .composite.title h2": {
-  //     "width": "100%",
-  //     "text-align": "center"
-  //   },
-
-  //   ".sidebar .composite.title .title-actions .actions-container": {
-  //     "justify-content": "space-evenly !important"
-  //   }
-  // },
+  "apc.electron": {
+    "frame": false,
+    "opacity": 1
+  },
 
   /** Workbench UI */
   "workbench.colorTheme": "One Dark Pro",
@@ -145,7 +82,6 @@
   "editor.matchBrackets": "always",
   "editor.lineNumbers": "relative",
   "editor.bracketPairColorization.enabled": true,
-  // "editor.guides.bracketPairs": true,
 
   /** Editor Formating */
   "editor.formatOnSave": true,
@@ -352,6 +288,16 @@
     "asvetliakov.vscode-neovim": 1,
     "wenfangdu.jump": 1
   },
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["K"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    },
+    {
+      "before": ["J"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    }
+  ],
   "vim.normalModeKeyBindings": [
     {
       "before": ["leader", "w"],
@@ -476,6 +422,32 @@
     {
       "before": ["<leader>", "9"],
       "commands": ["vscode-harpoon.gotoEditor9"]
+    },
+    // TOGGLE
+    {
+      "before": ["leader", "e"],
+      "commands": ["errorLens.toggleInlineMessage"]
+    },
+    {
+      "before": ["leader", "g"],
+      "commands": ["cSpell.toggleEnableSpellChecker"]
+    },
+    {
+      "before": ["leader", "i"],
+      "commands": ["extension.toggleBool"]
+    },
+    // GIT
+    {
+      "before": ["leader", "["],
+      "commands": ["editor.action.dirtydiff.next"]
+    },
+    {
+      "before": ["leader", "leader", "["],
+      "commands": ["editor.action.dirtydiff.previous"]
+    },
+    {
+      "before": ["leader", "tab"],
+      "commands": ["git.openChange"]
     }
   ],
   "vim.easymotion": true,
@@ -485,10 +457,9 @@
   "vim.hlsearch": true,
   "vim.foldfix": true,
   "vim.leader": "<space>",
-  // "editor.accessibilitySupport": "off",
   "dart.checkForSdkUpdates": false,
   "editor.accessibilitySupport": "off",
-  "editor.fontSize": 16,
+  "editor.fontSize": 14,
   "leetcode.workspaceFolder": "/Users/ctw01856/.leetcode",
   // "leetcode.defaultLanguage": "typescript",
   "leetcode.hint.commandShortcut": false,
@@ -499,9 +470,6 @@
   "window.customTitleBarVisibility": "never",
   "debug.allowBreakpointsEverywhere": true,
   "dart.previewFlutterUiGuides": true,
-  "dart.previewFlutterUiGuidesCustomTracking": true
-  // "vim.enableNeovim": true,
-  // "vim.neovimPath": "/opt/homebrew/bin/nvim",
-  // "vim.neovimConfigPath": "~/.config/nvim/lua/cem/initvscode.lua",
-  // "vim.neovimUseConfigFile": true
+  "dart.previewFlutterUiGuidesCustomTracking": true,
+  "errorLens.messageEnabled": false
 }
